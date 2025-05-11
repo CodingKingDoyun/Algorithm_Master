@@ -1,21 +1,47 @@
 #include <iostream>
-#include <string>
+#include <map>
 using namespace std;
 
+int num[500000];
+
 int main() {
-  int num;
-  cin >> num;
+  map<int, int, greater<int>> max;
 
-  int temp = 0, cnt = 0;
-  while (num != cnt) {
-    temp++;
-    string str = to_string(temp);  // "666" 을 찾기 위해 문자열로 변환
+  int size, trade;
+  cin >> size >> trade;
 
-    // find 함수로 "666" 찾고 cnt 증가
-    // npos는 -1을 가지는 상수 (찾으려는 문자열이 없을때 반환)
-    if (str.find("666") != string::npos) cnt++;
+  for (int i = 0; i < size; i++) {
+    cin >> num[i];
+    max[num[i]] = i;
   }
-  cout << temp << '\n';
 
+  for (auto p : max) {
+    for (int i = p.first - 1; i > 0; i--) {
+      if (p.first != num[i]) {
+        int temp = num[i];
+        num[i] = p.first;
+        num[p.second] = temp;
+        break;
+      } else
+        break;
+    }
+  }
+
+  for (int i = 0; i < size; i++) {
+    cout << num[i] << ' ';
+  }
   return 0;
+
+  /*
+  for (int i = size - 1; i > 0; i--) {
+    for (int j = i; j > 0; j--) {
+      if (i + 1 != num[j]) {
+        int temp = num[j];
+        num[j] = i + 1;
+        num[max[i]] = temp;
+        break;
+      }
+    }
+  }
+  */
 }
