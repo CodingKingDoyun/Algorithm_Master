@@ -2,44 +2,51 @@
 #include <map>
 using namespace std;
 
-int num[500000];
 
-int main() {
-  map<int, int, greater<int>> max;
+int arr[500001];
+map<int, int> big_map;
 
-  int size, trade, cnt = 0;
-  cin >> size >> trade;
+int selectionsort(int size, int swap) {
+  int cnt = 0;
+  int idx = size - 1;
 
-  for (int i = 0; i < size; i++) {
-    cin >> num[i];
-    max[num[i]] = i;
-  }
+  for (auto it = big_map.rbegin(); it != big_map.rend(); it++) {
+    int big = it->second;
 
-  for (auto it = max.begin(); it != max.end(); it++) {
-    auto curr_it = *it;
+    if (big != idx) {
+      auto temp = arr[idx];
+      arr[idx] = it->first;
+      arr[big] = temp;
 
-    for (int i = curr_it.first - 1; i > 0; i--) {
-      if (curr_it.first != num[i]) {
-        auto targ_it = max.find(i);
+      it->second = idx;
+      auto find = big_map.find(temp);
+      find->second = big;
 
-        int temp = num[i];
-        num[i] = curr_it.first;
-        num[curr_it.second] = temp;
+      cnt++;
 
-        cnt++;
-        if (trade == cnt) {
-          cout << temp << ' ' << num[i];
-          return 0;
-        }
+      if (cnt == swap) {
+        cout << arr[big] << ' ' << arr[idx] << '\n';
+        return 0;
+      }
 
-        temp = curr_it.second;
-        curr_it.second = targ_it->second;
-        targ_it->second = temp;
-        break;
-      } else
-        break;
+      idx--;
     }
   }
   cout << -1 << '\n';
+  return 0;
+}
+
+int main() {
+  int size, swap;
+  cin >> size >> swap;
+  for (int i = 0; i < size; i++) {
+    int num;
+    cin >> num;
+    arr[i] = num;
+    big_map[num] = i;
+  }
+
+  selectionsort(size,swap);
+
   return 0;
 }
