@@ -28,8 +28,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/Cpp_Project/main",
-      "program": "/workspaces/Cpp_Project/main/build/Debug/outDebug",
+      "cwd": "/home/codespace/Algorithm_Project-2/main",
+      "program": "/home/codespace/Algorithm_Project-2/main/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
