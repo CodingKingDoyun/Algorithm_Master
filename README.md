@@ -1,3 +1,6 @@
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=dmdkrehdbs)](https://solved.ac/dmdkrehdbs/)
+
+
 # 사지방에서 코딩을 하니 블루스크린이 발생하기 시작했다!!!!!!!!
 대한민국 국방수준에 걸맞는 사지방 컴퓨터답게 그 콩알만한 코드가 굉장한 무리였나보다..<br/>
 6월 초에 휴가를 나가서 갤럭시탭을 사온 뒤, 갤럭시탭으로 본격적인 코딩을 다시 시작해야겠다...<br/>
