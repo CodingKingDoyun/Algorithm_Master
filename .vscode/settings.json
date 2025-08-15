@@ -33,9 +33,10 @@
     "/w44265",
     "/w14928"
   ],
-  "C_Cpp_Runner.enableWarnings": true,
-  "C_Cpp_Runner.warningsAsError": false,
-  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.enableWarnings": false,
+  "C_Cpp_Runner.compilerArgs": [
+    "-w"
+  ],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
   "C_Cpp_Runner.includeSearch": [
@@ -102,6 +103,9 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "map": "cpp"
-  }
+    "map": "cpp",
+    "unordered_set": "cpp",
+    "set": "cpp"
+  },
+  "C_Cpp_Runner.warningsAsError": false
 }

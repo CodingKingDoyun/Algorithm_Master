@@ -9,7 +9,8 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "-Wno-sign-conversion"
       ],
       "options": {
         "cwd": "${fileDirname}"
@@ -21,7 +22,9 @@
         "kind": "build",
         "isDefault": true
       },
-      "detail": "디버거에서 생성된 작업입니다."
+      "detail": "디버거에서 생성된 작업입니다.",
+      
+      
     }
   ],
   "version": "2.0.0"
