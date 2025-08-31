@@ -1,0 +1,16 @@
+{
+  "name": "Rust Algo (lite)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": { "version": "stable", "profile": "minimal" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["rust-lang.rust-analyzer", "tamasfe.even-better-toml"],
+      "settings": {
+        "editor.formatOnSave": true,
+        "rust-analyzer.check.command": "clippy"
+      }
+    }
+  }
+}
