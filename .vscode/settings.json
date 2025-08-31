@@ -107,5 +107,23 @@
     "unordered_set": "cpp",
     "set": "cpp"
   },
-  "C_Cpp_Runner.warningsAsError": false
+  "C_Cpp_Runner.warningsAsError": false,
+
+  "editor.formatOnSave": true,
+
+  // Rust는 rust-analyzer가 rustfmt 호출
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+
+  // C/C++는 cpptools(= clang-format)
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  }
+
+  // 필요시 저장 시 변경사항만 포맷:
+  // "editor.formatOnSaveMode": "modifications"
 }
